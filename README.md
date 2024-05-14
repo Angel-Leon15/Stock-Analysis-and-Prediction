@@ -37,9 +37,9 @@ This Python project utilizes various libraries to fetch, analyze, and predict st
 
 ## Usage
 Run the script from the command line:
-```bash
-python ML_Stock_Project.py
-
+   ```bash
+   python ML_Stock_Project.py
+   ```
 Follow the interactive prompts in the command line interface to choose different options like viewing stock data, retrieving stock information, or predicting future prices.
 
 ## Contributing
