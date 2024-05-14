@@ -24,7 +24,7 @@ This Python project utilizes various libraries to fetch, analyze, and predict st
 ## Setup and Installation
 
 1. **Download the project:**
-   - Download the project as a ZIP file from [this link](https://github.com/angel-leon1/Stock-Analysis-And-Prediction/archive/refs/heads/main.zip).
+   - Download the project as a ZIP file from [this link]([https://github.com/angel-leon1/Stock-Analysis-And-Prediction/archive/refs/heads/main.zip](https://github.com/Angel-Leon15/Stock-Analysis-and-Prediction/blob/main/ML_Stock_Project.zip)).
 
 2. **Extract the ZIP file:**
    - Once downloaded, extract the contents of the ZIP file to a location of your choice on your computer.
