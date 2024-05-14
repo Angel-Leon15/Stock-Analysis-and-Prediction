@@ -21,18 +21,25 @@ This Python project utilizes various libraries to fetch, analyze, and predict st
 - `itertools`: Creating iterators for efficient looping.
 
 ## Setup and Installation
+## Setup and Installation
 
-1. **Clone the repository:**
-   ```bash 
-   git clone https://github.com/angel-leon1/Stock-Analysis-And-Prediction.git
+1. **Download the project:**
+   - Download the project as a ZIP file from [this link](https://github.com/angel-leon1/Stock-Analysis-And-Prediction/archive/refs/heads/main.zip).
 
-2. **Navigate to the project directory:**
-   ```bash
-   cd Stock-Analysis-and-Prediction
+2. **Extract the ZIP file:**
+   - Once downloaded, extract the contents of the ZIP file to a location of your choice on your computer.
 
-3. **Install required libraries:**
-   ```bash
-   pip install yfinance prophet pandas numpy matplotlib scikit-learn
+3. **Navigate to the project directory:**
+   - Open a terminal or command prompt and change directory to the location where you extracted the project.
+
+4. **Install required libraries:**
+   - Run the following command to install the necessary Python libraries:
+     ```bash
+     pip install yfinance prophet pandas numpy matplotlib scikit-learn
+     ```
+
+Now, you're ready to use the project by running the script.
+
 
 
 ## Usage
