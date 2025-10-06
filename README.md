@@ -1,78 +1,274 @@
-# Stock Analysis and Prediction Tool
+# ML Stock Price Prediction & Analysis Tool
 
-This Python project utilizes various libraries to fetch, analyze, and predict stock prices using historical data from Yahoo Finance. It is designed to provide insights into stock trends, basic properties, and option chains, as well as forecast future prices using Facebook's Prophet library for time series forecasting.
+A comprehensive machine learning tool for stock market analysis and price prediction using Facebook's Prophet algorithm, technical indicators, and advanced statistical methods.
 
-## Features
+## Project Overview
 
-- **Stock Data Retrieval**: Fetch historical stock data.
-- **Stock Information Display**: Show detailed information about the stock such as bid price, open price, previous close, etc.
-- **Option Chain Retrieval**: Get the option chain for a stock for a specific expiration date.
-- **Basic Stock Properties Display**: Show basic properties of the stock like the current price and volume.
-- **Stock Price Prediction**: Analyze trends and predict future stock prices using advanced statistical models.
+This project provides an interactive command-line application that fetches real-time stock data, performs technical analysis, detects outliers, and generates future price predictions using time series forecasting. The tool leverages Prophet's powerful forecasting capabilities combined with traditional technical indicators to provide insights into stock price movements.
 
-## 🛠️ Libraries Used
-- [yfinance](https://pypi.org/project/yfinance/) – Fetch stock data from Yahoo Finance.  
-- [prophet](https://facebook.github.io/prophet/) – Time series forecasting.  
-- [pandas](https://pandas.pydata.org/) – Data manipulation and analysis.  
-- [numpy](https://numpy.org/) – Numerical computations.  
-- [matplotlib](https://matplotlib.org/) – Visualization and plotting.  
-- [scikit-learn](https://scikit-learn.org/) – Preprocessing and machine learning utilities.  
+##  Key Features
 
-## ⚙️ Installation
+- **Real-Time Data Fetching**: Pulls historical and current stock data from Yahoo Finance API
+- **Technical Analysis**: Calculates moving averages (MA20, MA50) and Relative Strength Index (RSI)
+- **Outlier Detection**: Uses Elliptic Envelope algorithm to identify and remove anomalous data points
+- **Time Series Forecasting**: Prophet-based predictions with uncertainty intervals
+- **Hyperparameter Optimization**: Automated cross-validation to find optimal model parameters
+- **Seasonality Analysis**: Captures daily and yearly patterns in stock prices
+- **Market Holidays**: Incorporates US market holidays for improved accuracy
+- **Interactive Visualizations**: Displays historical prices, predictions, and forecast components
+- **Option Chain Analysis**: Retrieves and displays options data for specific expiration dates
 
-Clone the repository:
+## Use Cases
 
-```bash
-git clone https://github.com/yourusername/stock-analysis-prediction-tool.git
-cd stock-analysis-prediction-tool
+- **Traders & Investors**: Identify potential price trends and make informed decisions
+- **Data Scientists**: Study time series forecasting techniques in financial markets
+- **Students**: Learn about machine learning applications in finance
+- **Analysts**: Generate technical reports with statistical backing
+
+## 📁 Project Structure
+
+```
+.
+├── ML_Stock_Project.py          # Main application file
+├── README.md                     # Project documentation
+├── CONTRIBUTING.md               # Contribution guidelines
+├── METHODOLOGY.md                # Technical documentation
+└── requirements.txt              # Python dependencies
 ```
 
-Install Dependecies 
+## Prerequisites
+
+### System Requirements
+
+- Python 3.8 or higher
+- Internet connection (for fetching stock data)
+- Minimum 4GB RAM
+- Display capable of showing matplotlib plots
+
+### Required Python Packages
+
+```bash
+pip install yfinance prophet pandas numpy matplotlib scikit-learn
+```
+
+Or use the requirements file:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-Run The Main Script 
-```bash
-python ML_Stock_Project.py
+### Dependencies
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| `yfinance` | ≥0.2.0 | Yahoo Finance API wrapper |
+| `prophet` | ≥1.1 | Time series forecasting |
+| `pandas` | ≥1.3.0 | Data manipulation |
+| `numpy` | ≥1.21.0 | Numerical computing |
+| `matplotlib` | ≥3.4.0 | Visualization |
+| `scikit-learn` | ≥1.0.0 | Machine learning utilities |
+
+##  Getting Started
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/ml-stock-prediction.git
+   cd ml-stock-prediction
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the application**
+   ```bash
+   python ML_Stock_Project.py
+   ```
+
+### Quick Start Guide
+
+1. **Launch the program**
+   ```bash
+   python ML_Stock_Project.py
+   ```
+
+2. **Enter a stock symbol** (e.g., AAPL, GOOGL, TSLA)
+
+3. **Choose from available options**:
+   - `1`: Display basic properties (current price, volume)
+   - `2`: Display detailed stock information
+   - `3`: Retrieve option chain data
+   - `4`: Change stock symbol
+   - `5`: Analyze trends and predict future prices
+   - `6`: Exit program
+
+### Example Session
+
+```
+Enter stock symbol: AAPL
+
+Options:
+1. Display basic properties
+2. Display stock information
+3. Retrieve option chain
+4. Change stock symbol
+5. Analyze trends and predict future prices
+6. Exit
+
+Enter your choice (1-6): 5
+
+[Generates prediction plot and component analysis]
 ```
 
-Follow the interactive prompts to:
+##  Features in Detail
 
-- **View stock data**
+### 1. Real-Time Stock Data
 
-- **Retrieve stock information**
+Fetches comprehensive historical data including:
+- Open, High, Low, Close prices
+- Trading volume
+- Adjusted close prices
+- Complete price history
 
-- **Access option chains**
+### 2. Technical Indicators
 
-- **Predict future stock prices**
+**Moving Averages**:
+- MA20: 20-day moving average (short-term trend)
+- MA50: 50-day moving average (medium-term trend)
 
----
+**Relative Strength Index (RSI)**:
+- 14-period RSI calculation
+- Identifies overbought (>70) and oversold (<30) conditions
 
-## Project Structure
+### 3. Outlier Detection
 
+- **Algorithm**: Elliptic Envelope (robust covariance estimation)
+- **Contamination Rate**: 3% of data treated as outliers
+- **Features Used**: Price, Volume, RSI
+- **Purpose**: Remove anomalous data points that could skew predictions
+
+### 4. Price Prediction
+
+**Forecast Horizon**: 365 days (1 year) into the future
+
+**Model Features**:
+- Daily and yearly seasonality
+- US market holiday effects
+- Uncertainty intervals (confidence bands)
+- Hyperparameter-optimized Prophet model
+
+**Visualization**:
+- Historical prices (last 3 months)
+- Predicted prices (next 12 months)
+- Confidence intervals (uncertainty bands)
+- Component breakdown (trend, seasonality, holidays)
+
+### 5. Option Chain Analysis
+
+Retrieve calls and puts data for any available expiration date:
+- Strike prices
+- Bid/Ask prices
+- Implied volatility
+- Open interest
+
+## 📈 Model Performance
+
+The prediction model uses cross-validation to optimize hyperparameters:
+
+- **Initial Training Period**: 730 days (2 years)
+- **Validation Period**: 90 days
+- **Test Horizon**: 180 days
+- **Performance Metric**: RMSE (Root Mean Square Error)
+
+**Hyperparameters Tuned**:
+- `changepoint_prior_scale`: Controls trend flexibility
+- `seasonality_prior_scale`: Controls seasonality strength
+- `holidays_prior_scale`: Controls holiday effect strength
+
+## ⚠️ Important Disclaimers
+
+### Investment Warning
+
+**This tool is for educational and informational purposes only.**
+
+- ❌ NOT financial advice
+- ❌ NOT a guarantee of future performance
+- ❌ Past performance does not indicate future results
+- ❌ Always consult with a qualified financial advisor before making investment decisions
+
+### Model Limitations
+
+- Predictions are based on historical patterns
+- Cannot predict unprecedented market events (black swans)
+- Market conditions change; models may become outdated
+- External factors (news, policy changes) not incorporated
+- Higher uncertainty for longer prediction horizons
+
+## Troubleshooting
+
+### Common Issues
+
+**Issue**: "No module named 'prophet'"
 ```bash
-Stock-Analysis-and-Prediction/
-├── ML_Stock_Project.py      # Main script
-├── requirements.txt         # Project dependencies
-├── README.md                # Documentation
-├── LICENSE                  # License (MIT)
-├── .gitignore               # Git ignore rules
-├── Methodology
+# Solution: Install prophet with correct command
+pip install prophet
+# or
+conda install -c conda-forge prophet
 ```
 
-## Contributing
-Contributions are welcome! 
+**Issue**: "Error fetching data"
+- Check internet connection
+- Verify stock symbol is valid
+- Yahoo Finance API may be temporarily unavailable
 
-Here are some areas where improvements and new features would be especially helpful:
-- **Machine Learning Models**: Add more advanced models (e.g., LSTMs, XGBoost).  
-- **Financial Indicators**: Implement technical indicators like MACD, RSI, Bollinger Bands.  
-- **Sentiment Analysis**: Integrate sentiment data from news articles or social media.  
-- **Visualization**: Build a simple web dashboard to make the tool more interactive.  
+**Issue**: Matplotlib plots not displaying
+```python
+# Add this to your environment
+import matplotlib
+matplotlib.use('TkAgg')  # or 'Qt5Agg'
+```
 
-If you’d like to contribute, feel free to fork the repo, create a feature branch, and submit a pull request. Even small improvements (like fixing typos or cleaning up code) are valuable!  
+**Issue**: Long execution time for prediction
+- Normal for first run (model training takes time)
+- Subsequent predictions are faster
+- Consider reducing date range for hyperparameter tuning
 
+##  Future Enhancements
+
+- [ ] GUI interface using Tkinter or Streamlit
+- [ ] Portfolio analysis (multiple stocks)
+- [ ] Sentiment analysis from news/social media
+- [ ] Real-time prediction updates
+- [ ] Export predictions to CSV/Excel
+- [ ] Backtesting framework for strategy evaluation
+- [ ] Integration with additional data sources
+- [ ] LSTM/GRU neural network models
+- [ ] Ensemble predictions (multiple models)
+- [ ] Risk metrics (Value at Risk, Sharpe Ratio)
+
+##  Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- [Facebook Prophet](https://facebook.github.io/prophet/) for the forecasting framework
+- [yfinance](https://github.com/ranaroussi/yfinance) for Yahoo Finance API access
+- The open-source community for excellent Python libraries
+
+## 📚 Resources
+
+- [Prophet Documentation](https://facebook.github.io/prophet/docs/quick_start.html)
+- [Technical Analysis Primer](https://www.investopedia.com/terms/t/technicalanalysis.asp)
+- [Time Series Forecasting Guide](https://otexts.com/fpp3/)
+
+---
+
+**Disclaimer**: This software is provided "as is" without warranty of any kind. Use at your own risk. The authors are not responsible for any financial losses incurred from using this tool.
