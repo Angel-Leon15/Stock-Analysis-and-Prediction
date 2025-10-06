@@ -22,36 +22,53 @@ This Python project utilizes various libraries to fetch, analyze, and predict st
 
 ---
 
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/stock-analysis-prediction-tool.git
+cd stock-analysis-prediction-tool
+```
+
+Install Dependecies 
+```bash
+pip install -r requirements.txt
+```
+
+Run The Main Script 
+```bash
+python ML_Stock_Project.py
+```
+
+Follow the interactive prompts to:
+
+- **View stock data**
+
+- **Retrieve stock information**
+
+- **Access option chains**
+
+- **Predict future stock prices**
+
+---
+
+## Project Structure
+
+```bash
+Stock-Analysis-and-Prediction/
+├── ML_Stock_Project.py      # Main script
+├── requirements.txt         # Project dependencies
+├── README.md                # Documentation
+├── LICENSE                  # License (MIT)
+├── .gitignore               # Git ignore rules
+├── Methodology
+```
 
 
-## Setup and Installation
-## Setup and Installation
 
-1. **Download the project:**
-   - Download the project as a ZIP file from [this link](https://github.com/Angel-Leon15/Stock-Analysis-and-Prediction/blob/main/ML_Stock_Project.zip).
-
-2. **Extract the ZIP file:**
-   - Once downloaded, extract the contents of the ZIP file to a location of your choice on your computer.
-
-3. **Navigate to the project directory:**
-   - Open a terminal or command prompt and change directory to the location where you extracted the project.
-
-4. **Install required libraries:**
-   - Run the following command to install the necessary Python libraries:
-     ```bash
-     pip install yfinance prophet pandas numpy matplotlib scikit-learn
-     ```
-
-Now, you're ready to use the project by running the script.
-
-
-
-## Usage
-Run the script from the command line:
-   ```bash
-   python ML_Stock_Project.py
-   ```
-Follow the interactive prompts in the command line interface to choose different options like viewing stock data, retrieving stock information, or predicting future prices.
 
 ## Contributing
 
