@@ -10,8 +10,6 @@ This Python project utilizes various libraries to fetch, analyze, and predict st
 - **Basic Stock Properties Display**: Show basic properties of the stock like the current price and volume.
 - **Stock Price Prediction**: Analyze trends and predict future stock prices using advanced statistical models.
 
----
-
 ## 🛠️ Libraries Used
 - [yfinance](https://pypi.org/project/yfinance/) – Fetch stock data from Yahoo Finance.  
 - [prophet](https://facebook.github.io/prophet/) – Time series forecasting.  
@@ -19,10 +17,6 @@ This Python project utilizes various libraries to fetch, analyze, and predict st
 - [numpy](https://numpy.org/) – Numerical computations.  
 - [matplotlib](https://matplotlib.org/) – Visualization and plotting.  
 - [scikit-learn](https://scikit-learn.org/) – Preprocessing and machine learning utilities.  
-
----
-
----
 
 ## ⚙️ Installation
 
