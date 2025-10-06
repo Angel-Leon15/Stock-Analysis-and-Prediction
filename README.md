@@ -72,7 +72,11 @@ Stock-Analysis-and-Prediction/
 
 ## Contributing
 
-Contributions are welcome! For major changes, please open an issue first to discuss what you would like to change.
+Contributions are welcome! These are areas I'm looking to imporve and add: 
+- Add more advanced machine learning models (LSTMs, XGBoost).  
+- Include more financial indicators (MACD, RSI, Bollinger Bands).  
+- Integrate sentiment analysis from news or social media.  
+- Build a simple web dashboard for visualizati
 
 ## License
 
