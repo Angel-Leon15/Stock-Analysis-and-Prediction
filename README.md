@@ -1,4 +1,4 @@
-# ML Stock Price Prediction & Analysis Tool
+# Stock Price Prediction & Analysis Tool
 
 A comprehensive machine learning tool for stock market analysis and price prediction using Facebook's Prophet algorithm, technical indicators, and advanced statistical methods.
 
