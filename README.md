@@ -67,12 +67,7 @@ Stock-Analysis-and-Prediction/
 ├── Methodology
 ```
 
-
-
-
 ## Contributing
-
-## 🤝 Contributing
 Contributions are welcome! 
 
 Here are some areas where improvements and new features would be especially helpful:
