@@ -72,11 +72,17 @@ Stock-Analysis-and-Prediction/
 
 ## Contributing
 
-Contributions are welcome! These are areas I'm looking to imporve and add: 
-- Add more advanced machine learning models (LSTMs, XGBoost).  
-- Include more financial indicators (MACD, RSI, Bollinger Bands).  
-- Integrate sentiment analysis from news or social media.  
-- Build a simple web dashboard for visualizati
+## 🤝 Contributing
+Contributions are welcome! 
+
+Here are some areas where improvements and new features would be especially helpful:
+- **Machine Learning Models**: Add more advanced models (e.g., LSTMs, XGBoost).  
+- **Financial Indicators**: Implement technical indicators like MACD, RSI, Bollinger Bands.  
+- **Sentiment Analysis**: Integrate sentiment data from news articles or social media.  
+- **Visualization**: Build a simple web dashboard to make the tool more interactive.  
+
+If you’d like to contribute, feel free to fork the repo, create a feature branch, and submit a pull request. Even small improvements (like fixing typos or cleaning up code) are valuable!  
+
 
 ## License
 
